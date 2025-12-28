@@ -2,4 +2,4 @@
 
 source 'https://rubygems.org'
 
-gem 'rubocop-rails-omakase', require: false, group: [:development]
+gem 'rubocop', require: false
