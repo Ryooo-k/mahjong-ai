@@ -1,0 +1,39 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 4.0
+  SuggestExtensions: false
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: no_space
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Layout/IndentationWidth:
+  Enabled: true
+  Width: 2
+
+Style/Documentation:
+  Enabled: false
+
+Layout/SpaceInsideBlockBraces:
+  Enabled: true
+
+Layout/SpaceAroundOperators:
+  Enabled: true
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Metrics/MethodLength:
+  Max: 15
