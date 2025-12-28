@@ -3,3 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'rubocop', require: false
+
+group :torch do
+  gem 'torch-rb', require: false
+end
