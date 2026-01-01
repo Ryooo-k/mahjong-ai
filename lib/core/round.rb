@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative './honba'
+
 class Round
   attr_reader :count
 
