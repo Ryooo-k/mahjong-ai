@@ -22,7 +22,7 @@ class Game
     @game_mode = GAME_MODE.new(config['game_mode_id'])
     @players = Array.new(@game_mode.participant_count) { |id| Player.new(id, config["player_#{id}"]) }
     @ordered_players = @players.shuffle
-    @tiles = Array.new(TILE_COUNT) { |id| Tile.new(id) }
+    @tiles = build_tiles
     @round = Round.new(@tiles)
   end
 
@@ -114,6 +114,13 @@ class Game
   end
 
   private
+
+    def build_tiles
+      Array.new(TILE_COUNT) do |id|
+        is_red = @game_mode.red_ids.include?(id)
+        Tile.new(id, is_red)
+      end
+    end
 
     def honba
       @round.honba
