@@ -16,12 +16,14 @@ class Game
     30 => 27,
     33 => 31
   }.freeze
+  TILE_COUNT = 136
 
   def initialize(config)
     @game_mode = GAME_MODE.new(config['game_mode_id'])
     @players = Array.new(@game_mode.participant_count) { |id| Player.new(id, config["player_#{id}"]) }
     @ordered_players = @players.shuffle
-    @round = Round.new
+    @tiles = Array.new(TILE_COUNT) { |id| Tile.new(id) }
+    @round = Round.new(@tiles)
   end
 
   def round_name

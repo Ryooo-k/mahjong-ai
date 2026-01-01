@@ -18,9 +18,9 @@ class Round
       11 => '西四局'
     }.freeze
 
-  def initialize
+  def initialize(tiles)
     @count = 0
-    @honba = Honba.new
+    @honba = Honba.new(tiles)
   end
 
   def name
